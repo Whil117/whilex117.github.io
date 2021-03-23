@@ -1,0 +1,17 @@
+.artcl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .artcl__text {
+    width: 400px;
+  }
+  .artcl__image-container {
+    width: 400px;
+    height: 300px;
+    .artcl__img {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}

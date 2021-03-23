@@ -1,0 +1,32 @@
+.comentary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  .comentary__profiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    .comentary__profile-img-container {
+      .comentary__profile-img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .comentary__profile-description {
+      margin: {
+        left: 20px;
+      }
+      .comentary__profile-text {
+        width: 550px;
+      }
+    }
+  }
+}
+// @media (max-width: 817px) {
+//   .comentary__profiles {
+//     display: none;
+//   }
+// }

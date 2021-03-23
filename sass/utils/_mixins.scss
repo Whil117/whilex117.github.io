@@ -1,0 +1,16 @@
+@mixin button() {
+  transition: 0.3s easly all;
+  border-radius: 8px;
+  background: {
+    color: rgb(46, 46, 46);
+  }
+  padding: 10px;
+  color: white;
+  &:hover {
+    background: {
+      color: rgb(126, 126, 126);
+    }
+    padding: 10px;
+    color: white;
+  }
+}
