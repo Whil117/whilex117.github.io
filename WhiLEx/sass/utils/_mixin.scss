@@ -1,0 +1,25 @@
+@mixin button {
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+  border-radius: 15px;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  background: {
+    color: white;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin circle($bgcolor) {
+  margin-left: 10px;
+  background: $bgcolor;
+  border: {
+    radius: 50%;
+  }
+  height: 30px;
+  width: 30px;
+}

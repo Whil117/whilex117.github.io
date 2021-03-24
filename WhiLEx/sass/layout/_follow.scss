@@ -1,0 +1,14 @@
+.follow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .follow__github {
+    @include button();
+  }
+  .follow__youtube {
+    @include button();
+  }
+  .follow__facebook {
+    @include button();
+  }
+}
