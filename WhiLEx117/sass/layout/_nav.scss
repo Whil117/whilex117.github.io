@@ -1,0 +1,21 @@
+.colors {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: {
+    color: white;
+  }
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .colors__red {
+    @include circle(hsl(1, 100%, 68%));
+  }
+  .colors__yellow {
+    @include circle(hsl(39, 100%, 63%));
+  }
+  .colors__green {
+    @include circle(hsl(147, 100%, 34%));
+  }
+}
