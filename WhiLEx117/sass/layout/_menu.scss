@@ -7,6 +7,9 @@
     top: 20px;
     bottom: 20px;
   }
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
   .user__name {
     width: 400px;
     height: 400px;
@@ -22,7 +25,7 @@
     .user__name-img {
       width: 200px;
       height: 200px;
-      border-radius: 15px;
+      border-radius: 50%;
     }
   }
 }

@@ -2,13 +2,41 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  transition: 0.3s ease all;
   .follow__github {
+    transition: 0.3s ease all;
     @include button();
+    .follow__github-icon {
+      transition: 0.3s ease all;
+      fill: #3e60b8;
+      body.dark & {
+        transition: 0.3s ease all;
+        fill: rgb(70, 70, 70);
+      }
+    }
   }
   .follow__youtube {
+    transition: 0.3s ease all;
     @include button();
+    .follow__youtube-icon {
+      transition: 0.3s ease all;
+      fill: #3e60b8;
+      body.dark & {
+        transition: 0.3s ease all;
+        fill: rgb(70, 70, 70);
+      }
+    }
   }
   .follow__facebook {
+    transition: 0.3s ease all;
     @include button();
+    .follow__facebook-icon {
+      transition: 0.3s ease all;
+      fill: #3e60b8;
+      body.dark & {
+        transition: 0.3s ease all;
+        fill: rgb(70, 70, 70);
+      }
+    }
   }
 }
