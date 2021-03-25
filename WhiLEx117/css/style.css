@@ -409,6 +409,7 @@ body {
   justify-content: none;
   flex-direction: none;
   outline: none;
+  transition: 0.3s ease all;
 }
 .colors__mode-dark .switch::after {
   content: "";
@@ -429,6 +430,7 @@ body {
   color: black;
 }
 .colors__mode-dark .switch.active::after {
+  transition: 0.5s ease all;
   right: 0;
   left: unset;
 }
@@ -571,11 +573,6 @@ body.dark .follow .follow__facebook-icon {
 }
 
 @media (max-width: 600px) {
-  .colors__mode-dark {
-    display: block;
-  }
-}
-@media (max-width: 600px) {
   .main__menu {
     width: 100%;
     height: 100%;
@@ -591,6 +588,9 @@ body.dark .follow .follow__facebook-icon {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+  .main__menu .container .colors .colors__mode-dark {
+    display: block;
   }
   .main__menu .container .user {
     height: 100%;
@@ -635,6 +635,25 @@ body.dark .follow .follow__facebook-icon {
   }
   .main__menu .container .user .follow .follow__facebook-icon {
     fill: #3e60b8;
+  }
+}
+@media screen and (max-width: auto), screen and (max-height: 635px) and (orientation: landscape) {
+  .main__menu {
+    height: 100%;
+    width: 100%;
+  }
+  .main__menu .container {
+    height: 100%;
+    width: 100%;
+  }
+  .main__menu .container .colors {
+    width: 100%;
+  }
+  .main__menu .container .colors__mode-dark {
+    display: inline-block;
+  }
+  .main__menu .container .user {
+    display: flex;
   }
 }
 
