@@ -1,42 +1,49 @@
 .follow {
+  .follow__icon-bg {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+    @include flexbox(center, center, none);
+    border-radius: 8px;
+    padding: 7px;
+    width: 45px;
+    height: 40px;
+    background: white;
+    margin: {
+      left: 8px;
+      right: 8px;
+    }
+  }
+  .follow__icon-bg:hover {
+    transition: 0.3s ease all;
+    transform: scale(1.2);
+  }
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flexbox(none, center, none);
   transition: 0.3s ease all;
-  .follow__github {
+
+  .follow__github-icon {
     transition: 0.3s ease all;
-    @include button();
-    .follow__github-icon {
+    fill: #3e60b8;
+    body.dark & {
       transition: 0.3s ease all;
-      fill: #3e60b8;
-      body.dark & {
-        transition: 0.3s ease all;
-        fill: rgb(70, 70, 70);
-      }
+      fill: rgb(70, 70, 70);
     }
   }
-  .follow__youtube {
+
+  .follow__youtube-icon {
     transition: 0.3s ease all;
-    @include button();
-    .follow__youtube-icon {
+    fill: #3e60b8;
+    body.dark & {
       transition: 0.3s ease all;
-      fill: #3e60b8;
-      body.dark & {
-        transition: 0.3s ease all;
-        fill: rgb(70, 70, 70);
-      }
+      fill: rgb(70, 70, 70);
     }
   }
-  .follow__facebook {
+
+  .follow__facebook-icon {
     transition: 0.3s ease all;
-    @include button();
-    .follow__facebook-icon {
+    fill: #3e60b8;
+    body.dark & {
       transition: 0.3s ease all;
-      fill: #3e60b8;
-      body.dark & {
-        transition: 0.3s ease all;
-        fill: rgb(70, 70, 70);
-      }
+      fill: rgb(70, 70, 70);
     }
   }
 }

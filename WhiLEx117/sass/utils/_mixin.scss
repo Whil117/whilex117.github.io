@@ -23,3 +23,9 @@
   height: 30px;
   width: 30px;
 }
+@mixin flexbox($flex-align, $flex-justify, $flex-direction) {
+  display: flex;
+  align-items: $flex-align;
+  justify-content: $flex-justify;
+  flex-direction: $flex-direction;
+}

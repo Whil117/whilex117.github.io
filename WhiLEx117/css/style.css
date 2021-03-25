@@ -345,40 +345,33 @@ body {
   width: 500px;
   display: flex;
   flex-direction: column;
-  height: auto;
+  justify-content: center;
+  height: 600px;
   border-radius: 20px;
   transition: 0.3s ease all;
 }
 
-@media (max-width: 600px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    border-radius: 0px;
-  }
-  .container .colors {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-}
 .colors {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-color: white;
+  background-color: #ececec;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: none;
 }
 .colors .colors__list {
   display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: none;
 }
 .colors .colors__mode-dark {
   margin-right: 20px;
 }
 .colors .colors__red {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #ff5f5c;
   border-radius: 50%;
@@ -386,6 +379,7 @@ body {
   width: 30px;
 }
 .colors .colors__yellow {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #ffbd42;
   border-radius: 50%;
@@ -393,6 +387,7 @@ body {
   width: 30px;
 }
 .colors .colors__green {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #00ad4e;
   border-radius: 50%;
@@ -404,12 +399,16 @@ body {
   display: none;
 }
 .colors__mode-dark .switch {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   background-color: #3e60b8;
   border-radius: 1000px;
   border: none;
   position: relative;
   cursor: pointer;
   display: flex;
+  align-items: none;
+  justify-content: none;
+  flex-direction: none;
   outline: none;
 }
 .colors__mode-dark .switch::after {
@@ -424,7 +423,7 @@ body {
   right: unset;
   border-radius: 100px;
   transition: 0.3s ease all;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.3);
 }
 .colors__mode-dark .switch.active {
   background: orange;
@@ -443,34 +442,33 @@ body {
   color: white;
 }
 
-@media (max-width: 600px) {
-  .colors__mode-dark {
-    display: block;
-  }
-}
 body .main__menu {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: none;
 }
 
 body {
   transition: 0.3s ease all;
 }
-body.dark .main__menu .container .user {
+body.dark .main__menu .container {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   transition: 0.3s ease all;
-  height: 100%;
   background: #3d3d3d;
 }
-body.dark .main__menu .container .user .follow .follow__github .follow__github-icon {
+body.dark .main__menu .container .user {
+  transition: 0.3s ease all;
+}
+body.dark .main__menu .container .user .follow .follow__github-icon {
   fill: #3d3d3d;
 }
-body.dark .main__menu .container .user .follow .follow__youtube .follow__youtube-icon {
+body.dark .main__menu .container .user .follow .follow__youtube-icon {
   fill: #3d3d3d;
 }
-body.dark .main__menu .container .user .follow .follow__facebook .follow__facebook-icon {
+body.dark .main__menu .container .user .follow .follow__facebook-icon {
   fill: #3d3d3d;
 }
 body.light .main__menu .container {
@@ -481,27 +479,128 @@ body.light .main__menu .container {
 }
 body.light .main__menu .container .user {
   transition: 0.3s ease all;
-  height: 100%;
-  background: #3e60b8;
 }
-body.light .main__menu .container .user .follow .follow__github .follow__github-icon {
+body.light .main__menu .container .user .follow .follow__github-icon {
   fill: #3e60b8;
 }
-body.light .main__menu .container .user .follow .follow__youtube .follow__youtube-icon {
+body.light .main__menu .container .user .follow .follow__youtube-icon {
   fill: #3e60b8;
 }
-body.light .main__menu .container .user .follow .follow__facebook .follow__facebook-icon {
+body.light .main__menu .container .user .follow .follow__facebook-icon {
   fill: #3e60b8;
 }
 
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 540px;
+}
+.user .user__name {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user .user__name .user__name-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+.user .user__name .user__name-img {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.follow {
+  width: 100%;
+  display: flex;
+  align-items: none;
+  justify-content: center;
+  flex-direction: none;
+  transition: 0.3s ease all;
+}
+.follow .follow__icon-bg {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: none;
+  border-radius: 8px;
+  padding: 7px;
+  width: 45px;
+  height: 40px;
+  background: white;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.follow .follow__icon-bg:hover {
+  transition: 0.3s ease all;
+  transform: scale(1.2);
+}
+.follow .follow__github-icon {
+  transition: 0.3s ease all;
+  fill: #3e60b8;
+}
+body.dark .follow .follow__github-icon {
+  transition: 0.3s ease all;
+  fill: #464646;
+}
+.follow .follow__youtube-icon {
+  transition: 0.3s ease all;
+  fill: #3e60b8;
+}
+body.dark .follow .follow__youtube-icon {
+  transition: 0.3s ease all;
+  fill: #464646;
+}
+.follow .follow__facebook-icon {
+  transition: 0.3s ease all;
+  fill: #3e60b8;
+}
+body.dark .follow .follow__facebook-icon {
+  transition: 0.3s ease all;
+  fill: #464646;
+}
+
+@media (max-width: 600px) {
+  .colors__mode-dark {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .main__menu {
+    width: 100%;
+    height: 100%;
+  }
+  .main__menu .container {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .main__menu .container .colors {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .main__menu {
     transition: 0.3s ease all;
     background: #4e4e4e;
   }
-  .main__menu .container .user {
+  .main__menu .container {
     transition: 0.3s ease all;
-    height: 100%;
     background: #3d3d3d;
   }
   .main__menu .container .user .follow .follow__github {
@@ -522,117 +621,19 @@ body.light .main__menu .container .user .follow .follow__facebook .follow__faceb
     transition: 0.3s ease all;
     background: silver;
   }
-  .main__menu .container .user {
+  .main__menu .container {
     transition: 0.3s ease all;
     background: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__github .follow__github-icon {
+  .main__menu .container .user .follow .follow__github-icon {
     fill: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__github .follow__youtube-icon {
+  .main__menu .container .user .follow .follow__youtube-icon {
     fill: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__github .follow__facebook-icon {
+  .main__menu .container .user .follow .follow__facebook-icon {
     fill: #3e60b8;
   }
-}
-.user {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  height: 100%;
-}
-.user .user__name {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.user .user__name .user__name-title {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-}
-.user .user__name .user__name-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.follow {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  transition: 0.3s ease all;
-}
-.follow .follow__github {
-  transition: 0.3s ease all;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 15px;
-  padding: 5px;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.follow .follow__github .follow__github-icon {
-  transition: 0.3s ease all;
-  fill: #3e60b8;
-}
-body.dark .follow .follow__github .follow__github-icon {
-  transition: 0.3s ease all;
-  fill: #464646;
-}
-.follow .follow__youtube {
-  transition: 0.3s ease all;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 15px;
-  padding: 5px;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.follow .follow__youtube .follow__youtube-icon {
-  transition: 0.3s ease all;
-  fill: #3e60b8;
-}
-body.dark .follow .follow__youtube .follow__youtube-icon {
-  transition: 0.3s ease all;
-  fill: #464646;
-}
-.follow .follow__facebook {
-  transition: 0.3s ease all;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 15px;
-  padding: 5px;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.follow .follow__facebook .follow__facebook-icon {
-  transition: 0.3s ease all;
-  fill: #3e60b8;
-}
-body.dark .follow .follow__facebook .follow__facebook-icon {
-  transition: 0.3s ease all;
-  fill: #464646;
 }
 
 /*# sourceMappingURL=style.css.map */

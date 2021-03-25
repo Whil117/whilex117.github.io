@@ -1,10 +1,7 @@
 body {
   .main__menu {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(center, center, none);
   }
 }
 body {
@@ -12,25 +9,24 @@ body {
   &.dark {
     .main__menu {
       .container {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: 0.3s ease all;
+        background: #3d3d3d;
         .user {
           transition: 0.3s ease all;
-          height: 100%;
-          background: #3d3d3d;
+
           .follow {
-            .follow__github {
-              .follow__github-icon {
-                fill: #3d3d3d;
-              }
+            .follow__github-icon {
+              fill: #3d3d3d;
             }
-            .follow__youtube {
-              .follow__youtube-icon {
-                fill: #3d3d3d;
-              }
+
+            .follow__youtube-icon {
+              fill: #3d3d3d;
             }
-            .follow__facebook {
-              .follow__facebook-icon {
-                fill: #3d3d3d;
-              }
+
+            .follow__facebook-icon {
+              fill: #3d3d3d;
             }
           }
         }
@@ -46,74 +42,15 @@ body {
         background: #3e60b8;
         .user {
           transition: 0.3s ease all;
-          height: 100%;
-          background: #3e60b8;
           .follow {
-            .follow__github {
-              .follow__github-icon {
-                fill: #3e60b8;
-              }
-            }
-            .follow__youtube {
-              .follow__youtube-icon {
-                fill: #3e60b8;
-              }
-            }
-            .follow__facebook {
-              .follow__facebook-icon {
-                fill: #3e60b8;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .main__menu {
-    transition: 0.3s ease all;
-    background: rgb(78, 78, 78);
-    .container {
-      .user {
-        transition: 0.3s ease all;
-        height: 100%;
-        background: #3d3d3d;
-        .follow {
-          .follow__github {
-            fill: #3d3d3d;
-          }
-          .follow__github-icon {
-            fill: #3d3d3d;
-          }
-          .follow__youtube-icon {
-            fill: #3d3d3d;
-          }
-          .follow__facebook-icon {
-            fill: #3d3d3d;
-          }
-        }
-      }
-    }
-  }
-}
-@media (prefers-color-scheme: light) {
-  .main__menu {
-    transition: 0.3s ease all;
-    background: rgb(192, 192, 192);
-    .container {
-      .user {
-        transition: 0.3s ease all;
-        background: #3e60b8;
-        .follow {
-          .follow__github {
             .follow__github-icon {
               fill: #3e60b8;
             }
+
             .follow__youtube-icon {
               fill: #3e60b8;
             }
+
             .follow__facebook-icon {
               fill: #3e60b8;
             }

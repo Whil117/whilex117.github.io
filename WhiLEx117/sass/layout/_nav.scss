@@ -2,15 +2,12 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background: {
-    color: white;
+    color: rgb(236, 236, 236);
   }
   height: 60px;
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
+  @include flexbox(center, space-between, none);
   .colors__list {
-    display: flex;
+    @include flexbox(center, none, none);
   }
   .colors__mode-dark {
     margin: {
@@ -18,12 +15,15 @@
     }
   }
   .colors__red {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
     @include circle(hsl(1, 100%, 68%));
   }
   .colors__yellow {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
     @include circle(hsl(39, 100%, 63%));
   }
   .colors__green {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
     @include circle(hsl(147, 100%, 34%));
   }
 }
