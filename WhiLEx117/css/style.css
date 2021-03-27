@@ -341,18 +341,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  width: 500px;
+.main__menu {
+  width: 100%;
+  height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: none;
+}
+
+.container {
+  display: flex;
+  align-items: none;
+  justify-content: none;
   flex-direction: column;
+  width: 500px;
   height: 600px;
   border-radius: 20px;
   transition: 0.3s ease all;
 }
 
 .colors {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background-color: #ececec;
   height: 60px;
   display: flex;
@@ -363,13 +373,10 @@ body {
 .colors .colors__list {
   display: flex;
   align-items: center;
-  justify-content: none;
+  justify-content: center;
   flex-direction: none;
 }
-.colors .colors__mode-dark {
-  margin-right: 20px;
-}
-.colors .colors__red {
+.colors .colors__list-red {
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #ff5f5c;
@@ -377,7 +384,7 @@ body {
   height: 30px;
   width: 30px;
 }
-.colors .colors__yellow {
+.colors .colors__list-yellow {
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #ffbd42;
@@ -385,13 +392,16 @@ body {
   height: 30px;
   width: 30px;
 }
-.colors .colors__green {
+.colors .colors__list-green {
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   margin-left: 10px;
   background: #00ad4e;
   border-radius: 50%;
   height: 30px;
   width: 30px;
+}
+.colors__mode-dark {
+  margin-right: 20px;
 }
 
 .colors__mode-dark {
@@ -443,51 +453,41 @@ body {
   color: white;
 }
 
-body .main__menu {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: none;
-}
-
 body {
   transition: 0.3s ease all;
 }
 body.dark .main__menu .container {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   transition: 0.3s ease all;
   background: #3d3d3d;
 }
 body.dark .main__menu .container .user {
   transition: 0.3s ease all;
 }
-body.dark .main__menu .container .user .follow .follow__github-icon {
+body.dark .main__menu .container .user .follow__github-icon {
   fill: #3d3d3d;
 }
-body.dark .main__menu .container .user .follow .follow__youtube-icon {
+body.dark .main__menu .container .user .follow__youtube-icon {
   fill: #3d3d3d;
 }
-body.dark .main__menu .container .user .follow .follow__facebook-icon {
+body.dark .main__menu .container .user .follow__facebook-icon {
   fill: #3d3d3d;
 }
 body.light .main__menu .container {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   transition: 0.3s ease all;
   background: #3e60b8;
 }
 body.light .main__menu .container .user {
   transition: 0.3s ease all;
 }
-body.light .main__menu .container .user .follow .follow__github-icon {
+body.light .main__menu .container .user .follow__github-icon {
   fill: #3e60b8;
 }
-body.light .main__menu .container .user .follow .follow__youtube-icon {
+body.light .main__menu .container .user .follow__youtube-icon {
   fill: #3e60b8;
 }
-body.light .main__menu .container .user .follow .follow__facebook-icon {
+body.light .main__menu .container .user .follow__facebook-icon {
   fill: #3e60b8;
 }
 
@@ -498,23 +498,20 @@ body.light .main__menu .container .user .follow .follow__facebook-icon {
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
   height: 540px;
 }
 .user .user__name {
-  width: 400px;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.user .user__name .user__name-title {
+.user .user__name-title {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
 }
-.user .user__name .user__name-img {
+.user .user__name-img {
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   width: 200px;
   height: 200px;
@@ -522,74 +519,70 @@ body.light .main__menu .container .user .follow .follow__facebook-icon {
 }
 
 .follow {
-  width: 100%;
-  display: flex;
-  align-items: none;
-  justify-content: center;
-  flex-direction: none;
-  transition: 0.3s ease all;
-}
-.follow .follow__icon-bg {
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: none;
-  border-radius: 8px;
+}
+.follow__icon-bg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: none;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 25%;
   padding: 7px;
   width: 45px;
   height: 40px;
   background: white;
   margin-left: 8px;
   margin-right: 8px;
-}
-.follow .follow__icon-bg:hover {
   transition: 0.3s ease all;
+}
+.follow__icon-bg:hover {
   transform: scale(1.2);
+  transition: 0.3s ease all;
 }
-.follow .follow__github-icon {
+.follow__github-icon {
   transition: 0.3s ease all;
   fill: #3e60b8;
 }
-body.dark .follow .follow__github-icon {
+body.dark .follow__github-icon {
   transition: 0.3s ease all;
   fill: #464646;
 }
-.follow .follow__youtube-icon {
+.follow__youtube-icon {
   transition: 0.3s ease all;
   fill: #3e60b8;
 }
-body.dark .follow .follow__youtube-icon {
+body.dark .follow__youtube-icon {
   transition: 0.3s ease all;
   fill: #464646;
 }
-.follow .follow__facebook-icon {
+.follow__facebook-icon {
   transition: 0.3s ease all;
   fill: #3e60b8;
 }
-body.dark .follow .follow__facebook-icon {
+body.dark .follow__facebook-icon {
   transition: 0.3s ease all;
   fill: #464646;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .main__menu {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
   .main__menu .container {
     width: 100%;
     height: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 0 20px 20px;
   }
   .main__menu .container .colors {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 20px 20px;
   }
-  .main__menu .container .colors .colors__mode-dark {
+  .main__menu .container .colors__mode-dark {
     display: block;
   }
   .main__menu .container .user {
@@ -605,16 +598,16 @@ body.dark .follow .follow__facebook-icon {
     transition: 0.3s ease all;
     background: #3d3d3d;
   }
-  .main__menu .container .user .follow .follow__github {
+  .main__menu .container .user .follow__github {
     fill: #3d3d3d;
   }
-  .main__menu .container .user .follow .follow__github-icon {
+  .main__menu .container .user .follow__github-icon {
     fill: #3d3d3d;
   }
-  .main__menu .container .user .follow .follow__youtube-icon {
+  .main__menu .container .user .follow__youtube-icon {
     fill: #3d3d3d;
   }
-  .main__menu .container .user .follow .follow__facebook-icon {
+  .main__menu .container .user .follow__facebook-icon {
     fill: #3d3d3d;
   }
 }
@@ -627,33 +620,14 @@ body.dark .follow .follow__facebook-icon {
     transition: 0.3s ease all;
     background: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__github-icon {
+  .main__menu .container .user .follow__github-icon {
     fill: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__youtube-icon {
+  .main__menu .container .user .follow__youtube-icon {
     fill: #3e60b8;
   }
-  .main__menu .container .user .follow .follow__facebook-icon {
+  .main__menu .container .user .follow__facebook-icon {
     fill: #3e60b8;
-  }
-}
-@media screen and (max-width: auto), screen and (max-height: 635px) and (orientation: landscape) {
-  .main__menu {
-    height: 100%;
-    width: 100%;
-  }
-  .main__menu .container {
-    height: 100%;
-    width: 100%;
-  }
-  .main__menu .container .colors {
-    width: 100%;
-  }
-  .main__menu .container .colors__mode-dark {
-    display: inline-block;
-  }
-  .main__menu .container .user {
-    display: flex;
   }
 }
 

@@ -29,3 +29,11 @@
   justify-content: $flex-justify;
   flex-direction: $flex-direction;
 }
+@mixin follow__button {
+  transition: 0.3s ease all;
+  fill: #3e60b8;
+  body.dark & {
+    transition: 0.3s ease all;
+    fill: rgb(70, 70, 70);
+  }
+}

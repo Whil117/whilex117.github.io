@@ -1,8 +1,9 @@
 .follow {
-  .follow__icon-bg {
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  &__icon-bg {
+    width: 100%;
     @include flexbox(center, center, none);
-    border-radius: 8px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 25%;
     padding: 7px;
     width: 45px;
     height: 40px;
@@ -11,39 +12,22 @@
       left: 8px;
       right: 8px;
     }
-  }
-  .follow__icon-bg:hover {
     transition: 0.3s ease all;
+  }
+  &__icon-bg:hover {
     transform: scale(1.2);
-  }
-  width: 100%;
-  @include flexbox(none, center, none);
-  transition: 0.3s ease all;
-
-  .follow__github-icon {
     transition: 0.3s ease all;
-    fill: #3e60b8;
-    body.dark & {
-      transition: 0.3s ease all;
-      fill: rgb(70, 70, 70);
-    }
+  }
+  @include flexbox(center, center, none);
+  &__github-icon {
+    @include follow__button();
   }
 
-  .follow__youtube-icon {
-    transition: 0.3s ease all;
-    fill: #3e60b8;
-    body.dark & {
-      transition: 0.3s ease all;
-      fill: rgb(70, 70, 70);
-    }
+  &__youtube-icon {
+    @include follow__button();
   }
 
-  .follow__facebook-icon {
-    transition: 0.3s ease all;
-    fill: #3e60b8;
-    body.dark & {
-      transition: 0.3s ease all;
-      fill: rgb(70, 70, 70);
-    }
+  &__facebook-icon {
+    @include follow__button();
   }
 }

@@ -1,0 +1,54 @@
+body {
+  transition: 0.3s ease all;
+  &.dark {
+    .main__menu {
+      .container {
+        border-radius: 20px;
+        transition: 0.3s ease all;
+        background: #3d3d3d;
+        .user {
+          transition: 0.3s ease all;
+
+          .follow {
+            &__github-icon {
+              fill: #3d3d3d;
+            }
+
+            &__youtube-icon {
+              fill: #3d3d3d;
+            }
+
+            &__facebook-icon {
+              fill: #3d3d3d;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.light {
+    .main__menu {
+      .container {
+        border-radius: 20px;
+        transition: 0.3s ease all;
+        background: #3e60b8;
+        .user {
+          transition: 0.3s ease all;
+          .follow {
+            &__github-icon {
+              fill: #3e60b8;
+            }
+
+            &__youtube-icon {
+              fill: #3e60b8;
+            }
+
+            &__facebook-icon {
+              fill: #3e60b8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
