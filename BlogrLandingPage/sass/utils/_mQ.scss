@@ -1,0 +1,25 @@
+@media (min-width: 400px) and (max-width: 820px) {
+  .article {
+    .article__container {
+      .article__-1 {
+        @include flex(center, center);
+
+        .article__-1-description {
+          @include flex(center, center);
+          .article__-1-description-container {
+            article {
+              width: 400px;
+            }
+          }
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .article__-2 {
+      height: auto;
+    }
+    .article__-3 {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.nav__main-bar {
+  @include flex(center, space-around);
+  &-sections {
+    width: 400px;
+    @include flex(center, space-between);
+  }
+}
+.nav__main-eslogan {
+  @include flex(center, none);
+  flex-direction: column;
+}
+
+.article {
+  @include flex(none, center);
+  flex-direction: column;
+  &__container {
+    @include flex(center, center);
+    width: 100%;
+    .article__-1 {
+      flex-wrap: wrap;
+      margin: {
+        top: 80px;
+        bottom: 80px;
+      }
+      &-title {
+        @include flex(none, center);
+      }
+      width: 800px;
+      &-description {
+        @include flex(none, none);
+      }
+    }
+  }
+  .article__-2 {
+    flex-wrap: wrap;
+    margin: {
+      top: 80px;
+      bottom: 80px;
+    }
+    height: 300px;
+
+    @include flex(center, center);
+    &-img-container {
+      width: 400px;
+      height: 303px;
+      .article__-2-img {
+        border-radius: 0 100px;
+        width: 300px;
+        height: 303px;
+      }
+    }
+    &-description {
+      color: white;
+      width: 400px;
+    }
+  }
+  &__-3 {
+    margin: {
+      top: 80px;
+      bottom: 80px;
+    }
+    height: 300px;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    .article__-3-img-container {
+      .article__-3-img {
+        width: 400px;
+      }
+    }
+    .article__-3-description {
+      &-text {
+        width: 400px;
+        .article__-3-description {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+.foot {
+  color: white;
+  padding: 20px;
+  @include flex(none, space-around);
+  // flex-direction: column;
+  &-list {
+    @include flex(none, none);
+    div {
+      ol {
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

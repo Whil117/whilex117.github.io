@@ -1,0 +1,32 @@
+.nav__main {
+  &-bar {
+    &-sections {
+      &-title {
+        @include button(none, $txtcolor-2);
+      }
+      &-links {
+        @include button(none, $txtcolor-2);
+      }
+    }
+    .nav__main-login {
+      &-links {
+        @include button(white, $bgcolor-1);
+      }
+    }
+  }
+  &-eslogan {
+    color: white;
+    &-subtitle {
+      font-size: 25px;
+    }
+    &-buttons {
+      &-link:nth-child(1) {
+        @include button(white, $bgcolor-1);
+      }
+      &-link:nth-child(2) {
+        @include button(none, $txtcolor-2);
+        border: 2px solid $txtcolor-2;
+      }
+    }
+  }
+}
