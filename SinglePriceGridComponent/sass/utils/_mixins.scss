@@ -1,0 +1,33 @@
+@mixin grid {
+  max-width: 600px;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "desc1 desc2";
+  grid-template-rows: max-content max-content;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 400px) {
+    max-width: 400px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "title"
+      "title"
+      "desc1"
+      "desc2";
+  }
+  @media screen and (min-width: 170px) and (max-width: 400px) {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "title"
+      "title"
+      "desc1"
+      "desc2";
+  }
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

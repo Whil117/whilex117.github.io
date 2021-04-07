@@ -1,0 +1,66 @@
+main {
+  background: {
+    color: #e6eff6;
+  }
+  height: 100vh;
+  @include flex();
+  .card {
+    color: white;
+    width: 800px;
+    @include grid();
+    .card__descrpt {
+      border-radius: 20px 20px 0 0;
+      padding: 40px;
+      background: {
+        color: #ffffff;
+      }
+      grid-area: title;
+      &-title {
+        color: #49bebb;
+      }
+      &-text:nth-child(2) {
+        color: #bfdf32;
+      }
+      &-text:nth-child(3) {
+        color: grey;
+      }
+    }
+
+    .card__subs {
+      border-radius: 0 0 0 20px;
+      padding: 40px;
+      background: {
+        color: #2bb3b1;
+      }
+      grid-area: desc1;
+      &-plan-month {
+        @include flex();
+        width: 120px;
+        &-price {
+          font-size: 28px;
+        }
+      }
+      &-link {
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+        background: {
+          color: #bfdf32;
+        }
+      }
+      &-link:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .card__our {
+      border-radius: 0 0 20px 0;
+      padding: 40px;
+      background: {
+        color: #49bebb;
+      }
+      grid-area: desc2;
+    }
+  }
+}

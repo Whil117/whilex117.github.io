@@ -1,0 +1,48 @@
+$color1: rgb(61, 61, 61);
+
+.card {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: auto;
+  width: 100px;
+  background: {
+    color: $color1;
+  }
+  border: {
+    radius: 20px;
+  }
+  padding: 10px;
+  &__red {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    border-radius: 10px;
+    background: {
+      color: red;
+    }
+    height: 200px;
+  }
+  &__green {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    border-radius: 10px;
+    height: 200px;
+    background: {
+      color: green;
+    }
+  }
+  &__yellow {
+    margin: {
+      top: 5px;
+      bottom: 10px;
+    }
+    border-radius: 10px;
+    height: 200px;
+    background: {
+      color: yellow;
+    }
+  }
+}
