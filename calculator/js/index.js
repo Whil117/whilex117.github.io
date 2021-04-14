@@ -1,9 +1,9 @@
-const calculate = document.getElementById("calculate");
-const a = document.getElementById("num1"),
-  b = document.getElementById("num2"),
-  result = document.getElementById("result");
-
-const operator = document.getElementById("operator");
+const calculate = document.getElementById("calculate"),
+  numberOne = document.getElementById("number1"),
+  numberTwo = document.getElementById("number2"),
+  result = document.getElementById("result"),
+  operator = document.getElementById("operator"),
+  clean = document.getElementById("clean");
 
 const operations = {
   add: [(a, b) => a + b, " + "],
@@ -16,5 +16,14 @@ const operations = {
 calculate.addEventListener("click", () => {
   const [calc, Symbol] = operations[operator.value];
   result.textContent =
-    a.value + Symbol + b.value + " = " + calc(Number(a.value), Number(b.value));
+    numberOne.value +
+    Symbol +
+    numberTwo.value +
+    " = " +
+    calc(Number(numberOne.value), Number(numberTwo.value));
+});
+
+clean.addEventListener("click", () => {
+  const cleaner = () => "";
+  result.textContent = cleaner();
 });

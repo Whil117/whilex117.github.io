@@ -8,20 +8,18 @@
   </head>
   <body>
     <h1>calculator</h1>
-    <form>
-      <input type="text" placeholder="Number#1" id="num1" />
-      <input type="text" placeholder="Number#2" id="num2" />
-      operator:
-      <select id="operator">
-        <option value="add">Add</option>
-        <option value="min">Minus</option>
-        <option value="div">Divide</option>
-        <option value="mul">Multiply</option>
-        <option value="pow">Pow</option>
-      </select>
-      <button type="button" id="calculate">Calculate</button>
-    </form>
-    <h2 id="result"></h2>
+    <input type="text" id="number1" />
+    <select id="operator">
+      <option value="add">Add</option>
+      <option value="min">Minus</option>
+      <option value="div">Divide</option>
+      <option value="mul">Multiply</option>
+    </select>
+    <input type="text" id="number2" />
+    <button type="button" id="calculate">Calculate</button>
+    <button type="button" id="clean">Clean</button>
+    <h1 id="result"></h1>
+
     <script src="js/index.js"></script>
   </body>
 </html>
