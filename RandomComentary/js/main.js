@@ -1,7 +1,7 @@
-const url = "https://jsonplaceholder.typicode.com/users";
-const root = document.getElementById("root");
+const url = "https://jsonplaceholder.typicode.com/users",
+  root = document.getElementById("root"),
+  searchUser = document.getElementById("searchUser");
 
-const searchUser = document.getElementById("searchUser");
 let data;
 const showData = (items) =>
   items
@@ -18,6 +18,7 @@ window.onload = async () => {
   root.innerHTML = showData(data);
   console.log(data);
 };
+
 let search = "";
 searchUser.addEventListener("keyup", (e) => {
   root.innerHTML = showData(
