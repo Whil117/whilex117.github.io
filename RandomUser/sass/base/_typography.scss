@@ -1,0 +1,11 @@
+.card {
+  font-family: "Roboto", sans-serif;
+  &__item {
+    &-name {
+      font-size: x-large;
+    }
+    p {
+      font-size: larger;
+    }
+  }
+}
