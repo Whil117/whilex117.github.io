@@ -48,6 +48,6 @@ const fetchapp = async (url) =>
 
 searchUser.addEventListener("keyup", (e) => {
   root.innerHTML = showData(
-    data.filter((item) => item.name.includes(e.target.value))
+    dataUser.filter((item) => item.name.includes(e.target.value))
   );
 });
