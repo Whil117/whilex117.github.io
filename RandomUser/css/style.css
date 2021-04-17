@@ -381,7 +381,7 @@ template {
   height: 210px;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) and (max-width:720px) {
   #root {
     margin-left: 10px;
     margin-right: 10px;
