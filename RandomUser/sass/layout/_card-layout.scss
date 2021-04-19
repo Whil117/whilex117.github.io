@@ -1,3 +1,16 @@
+.search {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 10px;
+  .userFind {
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 2px 5px 12px #888888;
+  }
+}
+
 #root {
   display: flex;
   justify-content: center;

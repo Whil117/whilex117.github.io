@@ -347,6 +347,23 @@ template {
   font-size: larger;
 }
 
+.search .userFind {
+  font-family: "Roboto", sans-serif;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 10px;
+}
+.search .userFind {
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 5px 12px #888888;
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -381,7 +398,20 @@ template {
   height: 210px;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 225px) and (max-width: 520px) {
+  .search {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 10px;
+  }
+  .search .userFind {
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 2px 5px 12px #888888;
+  }
+
   #root {
     margin-left: 10px;
     margin-right: 10px;
