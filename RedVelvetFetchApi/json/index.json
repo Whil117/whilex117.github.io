@@ -1,38 +1,5 @@
 [
   {
-    "bandName": "Las aventuras del niño",
-    "site": "Seúl, Corea del Sur",
-    "formed": 2015,
-    "active": true,
-    "members": [
-      {
-        "id": 1,
-        "name": "Magic",
-        "age": 29
-      },
-      {
-        "id": 2,
-        "name": "Seulgi",
-        "age": 26
-      },
-      {
-        "id": 3,
-        "name": "Wendy",
-        "age": 25
-      },
-      {
-        "id": 4,
-        "name": "Joy",
-        "age": 23
-      },
-      {
-        "id": 5,
-        "name": "Yeri",
-        "age": 21
-      }
-    ]
-  },
-  {
     "bandName": "Red Velvet",
     "site": "Seúl, Corea del Sur",
     "formed": 2015,
@@ -44,8 +11,18 @@
         "age": 29
       },
       {
+        "id": 1,
+        "name": "Irene Two",
+        "age": 29
+      },
+      {
         "id": 2,
         "name": "Seulgi",
+        "age": 26
+      },
+      {
+        "id": 2,
+        "name": "Seulgi Two",
         "age": 26
       },
       {
@@ -54,13 +31,28 @@
         "age": 25
       },
       {
+        "id": 3,
+        "name": "Wendy Two",
+        "age": 25
+      },
+      {
         "id": 4,
         "name": "Joy",
         "age": 23
       },
       {
+        "id": 4,
+        "name": "Joy Two",
+        "age": 23
+      },
+      {
         "id": 5,
         "name": "Yeri",
+        "age": 21
+      },
+      {
+        "id": 5,
+        "name": "Yeri Two",
         "age": 21
       }
     ]
