@@ -2,12 +2,20 @@
 const baseURL = "https://reqres.in/api/users";
 
 //Methods
+
+//mapping dates of url
 const map = (mapper) => (array) => array.map(mapper);
+
+//filter date input
 const filter = (predicate) => (array) => array.filter(predicate);
 
+//Join name
 const join = (pattern) => (...arr) => arr.join(pattern);
+
+//write both ways
 const normalize = (string) => string.toLowerCase().trim();
 
+//Convert first and last name in a new array
 const makeName = join(" ");
 
 //Map dates
@@ -27,7 +35,7 @@ const UserInfo = map(
     `
 );
 
-//Fetch
+//Fetch api
 const getUsers = async () => {
   try {
     const res = await fetch(baseURL);
