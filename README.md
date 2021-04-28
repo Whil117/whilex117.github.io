@@ -1,1 +1,2 @@
-# WhiLEx117.github.io
+#Mini Projects
+These are my mini projects 
