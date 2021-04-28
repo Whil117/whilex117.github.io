@@ -1,2 +1,2 @@
-#Mini Projects.
+# Mini Projects.
 These are my mini projects 
